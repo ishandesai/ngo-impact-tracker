@@ -92,6 +92,18 @@ single report submission with validation and success feedback.
 
 ## deploy note
 
-* deploy **frontend** (vercel/netlify)
-* deploy **backend** (render)
-* set `VITE_API_URL` to your deployed backend `/api` url
+* Frontend (Vercel): https://ngo-impact-tracker-five.vercel.app
+* Backend (Render): https://ngo-impact-tracker-iiq2.onrender.com
+
+
+## AI Tools Used
+
+ChatGPT was used for debugging support and README documentation.
+
+## What I’d Improve Next (Production)
+
+* Real job queue (BullMQ/Redis) instead of in-process background task
+* Auth for admin dashboard
+* Better observability (structured logs, metrics)
+* Retry support for failed CSV rows
+* Rate limiting + request validation middleware

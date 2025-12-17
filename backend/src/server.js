@@ -61,8 +61,9 @@ app.use((req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
   console.log(`API endpoints:`);
   console.log(`POST /api/report - Submit single report`);
   console.log(`POST /api/reports/upload - Upload CSV for bulk processing`);
@@ -70,3 +71,4 @@ app.listen(PORT, () => {
   console.log(`GET  /api/dashboard?month=YYYY-MM OR month_from=YYYY-MM&month_to=YYYY-MM&ngo_id=NGO001`);
   console.log(`GET  /api/reports - Get all reports`);
 });
+
