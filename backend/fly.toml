@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for ngo-impact-tracker-api
+app = "ngo-impact-tracker-api"
+primary_region = "ams" # Amsterdam (Europe)
+
+[build]
+  builder = "heroku"
+
+[env]
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port = 3001
+  force_https = false
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+
+[checks]
+  [checks.status]
+    type = "http"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "5s"
+    method = "GET"
+    path = "/health"

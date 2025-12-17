@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+*.db
+*.db-shm
+*.db-wal
+uploads/*
+!uploads/.gitkeep
+.env
+.env.local
